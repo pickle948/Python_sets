@@ -66,7 +66,7 @@ def display_songs(songs, title="Songs"):
         print("   (empty)")
     else:
         for i, songs in enumerate(sorted(songs), 1):
-            print(f"   {i}. {song}")
+            print(f"   {i}. {songs}")
 
 
 def display_menu():
@@ -404,19 +404,18 @@ def check_relationships():
     print(f"   {friend}'s songs: {len(friend_songs)}")
 
     # TODO: Check various relationships
+    print("Mine is part of Friends: ", my_playlist.issubset(friend_songs))
+    print(my_playlist.issuperset(friend_songs))
+    print(my_playlist.isdisjoint(friend_songs))
+    print(my_playlist == friend_songs)
 
     # 1. Is my_playlist a subset of friend_songs?
     # 2. Is my_playlist a superset of friend_songs?
     # 3. Are they disjoint (no common songs)?
     # 4. Are they equal?
-    #
     # HINT: Use .issubset(), .issuperset(), .isdisjoint()
     # HINT: Use == for equality
     # HINT: Use < for proper subset, > for proper superset
-
-    # YOUR CODE HERE:
-    # Replace the pass with your comparison logic!
-    pass
 
 
 # ============================================
